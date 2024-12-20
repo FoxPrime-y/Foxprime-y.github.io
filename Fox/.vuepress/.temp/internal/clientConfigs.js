@@ -1,13 +1,13 @@
-import * as clientConfig0 from 'D:/FoxPrime/node_modules/@vuepress/plugin-active-header-links/lib/client/config.js'
-import * as clientConfig1 from 'D:/FoxPrime/node_modules/@vuepress/plugin-back-to-top/lib/client/config.js'
-import * as clientConfig2 from 'D:/FoxPrime/node_modules/@vuepress/plugin-copy-code/lib/client/config.js'
-import * as clientConfig3 from 'D:/FoxPrime/node_modules/@vuepress/plugin-markdown-hint/lib/client/config.js'
-import * as clientConfig4 from 'D:/FoxPrime/node_modules/@vuepress/plugin-medium-zoom/lib/client/config.js'
-import * as clientConfig5 from 'D:/FoxPrime/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
-import * as clientConfig6 from 'D:/FoxPrime/Fox/.vuepress/.temp/prismjs/config.js'
-import * as clientConfig7 from 'D:/FoxPrime/Fox/.vuepress/.temp/markdown-tab/config.js'
-import * as clientConfig8 from 'D:/FoxPrime/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
-import * as clientConfig9 from 'D:/FoxPrime/node_modules/@vuepress/theme-default/lib/client/config.js'
+import * as clientConfig0 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/plugin-active-header-links/lib/client/config.js'
+import * as clientConfig1 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/plugin-back-to-top/lib/client/config.js'
+import * as clientConfig2 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/plugin-copy-code/lib/client/config.js'
+import * as clientConfig3 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/plugin-markdown-hint/lib/client/config.js'
+import * as clientConfig4 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/plugin-medium-zoom/lib/client/config.js'
+import * as clientConfig5 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
+import * as clientConfig6 from 'D:/GitHub/foxprime.github.io/Fox/.vuepress/.temp/prismjs/config.js'
+import * as clientConfig7 from 'D:/GitHub/foxprime.github.io/Fox/.vuepress/.temp/markdown-tab/config.js'
+import * as clientConfig8 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
+import * as clientConfig9 from 'D:/GitHub/foxprime.github.io/node_modules/@vuepress/theme-default/lib/client/config.js'
 
 export const clientConfigs = [
   clientConfig0,
