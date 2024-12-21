@@ -7,6 +7,14 @@ export default defineUserConfig({
   dest: "docs", 
   bundler: viteBundler(),
   theme: defaultTheme({
-
+      nav: [
+             { text: '首页', link: '/' },
+             { text: '我的洛谷练习题', link: '/luogu/' },
+           ],
+           sidebar:{
+             '/blog/' :[
+ 
+             ]
+           }
   }),
 })
