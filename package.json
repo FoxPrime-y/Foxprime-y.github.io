@@ -2,6 +2,9 @@
   "name": "foxprime",
   "version": "1.0.0",
   "main": "index.js",
+  "directories": {
+    "Fox": "docs"
+  },
   "scripts": {
     "docs:dev": "vuepress dev Fox",
     "docs:build": "vuepress build Fox"
