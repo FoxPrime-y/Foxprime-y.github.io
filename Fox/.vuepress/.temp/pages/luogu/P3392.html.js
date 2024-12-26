@@ -1,5 +1,5 @@
-import comp from "D:/GitHub/foxprime.github.io/Fox/.vuepress/.temp/pages/404.html.vue"
-const data = JSON.parse("{\"path\":\"/404.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{\"layout\":\"NotFound\"},\"headers\":[],\"git\":{},\"filePathRelative\":null}")
+import comp from "D:/GitHub/foxprime.github.io/Fox/.vuepress/.temp/pages/luogu/P3392.html.vue"
+const data = JSON.parse("{\"path\":\"/luogu/P3392.html\",\"title\":\"P3392\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"luogu/P3392.md\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {
