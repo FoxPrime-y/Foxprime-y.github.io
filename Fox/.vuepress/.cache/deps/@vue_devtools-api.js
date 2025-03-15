@@ -28,7 +28,11 @@ var __toESM = (mod, isNodeMode, target2) => (target2 = mod != null ? __create(__
   mod
 ));
 var init_esm_shims = __esm({
+<<<<<<< HEAD
   "../../node_modules/.pnpm/tsup@8.3.5_@microsoft+api-extractor@7.48.0_@types+node@22.10.1__@swc+core@1.5.29_jiti@2.0.0_p_swvvp2d4pgn6xuiiec4l4x2i7a/node_modules/tsup/docs/assets/esm_shims.js"() {
+=======
+  "../../node_modules/.pnpm/tsup@8.3.5_@microsoft+api-extractor@7.48.0_@types+node@22.10.1__@swc+core@1.5.29_jiti@2.0.0_p_swvvp2d4pgn6xuiiec4l4x2i7a/node_modules/tsup../docs/assets/esm_shims.js"() {
+>>>>>>> 9e576ec (genxin)
     "use strict";
   }
 });
@@ -554,7 +558,11 @@ var __toESM2 = (mod, isNodeMode, target22) => (target22 = mod != null ? __create
   mod
 ));
 var init_esm_shims2 = __esm2({
+<<<<<<< HEAD
   "../../node_modules/.pnpm/tsup@8.3.5_@microsoft+api-extractor@7.48.0_@types+node@22.10.1__@swc+core@1.5.29_jiti@2.0.0_p_swvvp2d4pgn6xuiiec4l4x2i7a/node_modules/tsup/docs/assets/esm_shims.js"() {
+=======
+  "../../node_modules/.pnpm/tsup@8.3.5_@microsoft+api-extractor@7.48.0_@types+node@22.10.1__@swc+core@1.5.29_jiti@2.0.0_p_swvvp2d4pgn6xuiiec4l4x2i7a/node_modules/tsup../docs/assets/esm_shims.js"() {
+>>>>>>> 9e576ec (genxin)
     "use strict";
   }
 });
