@@ -12,7 +12,6 @@ features:
 - title: 随手更新
   details: 记录日常文件
 - title: 性能高效
-  details: VuePress 将每个页面生成为预渲染的静态 HTML，每个页面加载之后，然后作为单页面应用程序(SPA)运行。
+  details: 需要各种软件支持可+V:yf17537413229
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
-'# Hello VuePress' 
