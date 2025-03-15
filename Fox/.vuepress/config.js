@@ -9,10 +9,10 @@ export default defineUserConfig({
   theme: defaultTheme({
       navbar: [
              { text: '首页', link: '/' },
-             { text: '算法练习题', link: '/suanfa/' },
+             { text: '算法练习题', link: '../suanfa/' },
            ],
            sidebar:{
-             '/suanfa/':[
+             '../suanfa/':[
                   '',
                   'B2008.md', 
                   'B2016.md',

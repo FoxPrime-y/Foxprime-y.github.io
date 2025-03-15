@@ -1,184 +1,43 @@
 <!doctype html>
 <html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="generator" content="VuePress 2.0.0-rc.19" />
-  <style>
-    :root {
-      --vp-c-bg: #fff;
-    }
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
 
-    [data-theme='dark'] {
-      --vp-c-bg: #1b1b1f;
-    }
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
 
-    html,
-    body {
-      background-color: var(--vp-c-bg);
-    }
-  </style>
-  <script>
-    const userMode = localStorage.getItem('vuepress-color-scheme')
-    const systemDarkMode =
-      'matchMedia' in window
-        ? window.matchMedia('(prefers-color-scheme: dark)').matches
-        : false
-
-    if (userMode === 'light') {
-      document.documentElement.dataset.theme = 'light'
-    } else if (userMode === 'dark' || systemDarkMode) {
-      document.documentElement.dataset.theme = 'dark'
-    }
-  </script>
-  <title>LeetCode1981 | FoxPrime</title>
-  <meta name="description" content="">
-  <link rel="preload" href="../assets//style-DY60Z7J7.css" as="style">
-  <link rel="stylesheet" href="../assets//style-DY60Z7J7.css">
-  <link rel="modulepreload" href="../assets//app-FYnelbtM.js">
-  <link rel="modulepreload" href="../assets//LeetCode1981.html-B6XYnRMi.js">
-  <link rel="prefetch" href="../assets//index.html-BHD7hPLF.js" as="script">
-  <link rel="prefetch" href="../assets//B2008.html-N7DseFeW.js" as="script">
-  <link rel="prefetch" href="../assets//B2016.html-z-eHRj1T.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode02.05.html-DtG66dLP.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode128.html-DgY8bSl3.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode144.html-DOLYsCmp.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode148.html-D0evgHLR.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode1855.html-BK3BIajb.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode1980.html-CbRpEZR1.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode2007.html-Cdicwj5O.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode2023.html-BER5Iam8.js" as="script">
-  <link rel="prefetch" href="../assets//LeetCode2749.html-C5GP41H2.js" as="script">
-  <link rel="prefetch" href="../assets//P1010.html-OWLPyA_N.js" as="script">
-  <link rel="prefetch" href="../assets//P1026.html-BpWl5WaJ.js" as="script">
-  <link rel="prefetch" href="../assets//P1036.html-BkEQHX45.js" as="script">
-  <link rel="prefetch" href="../assets//P1125.html-Bj94nbQo.js" as="script">
-  <link rel="prefetch" href="../assets//P1138.html-CMT8jicR.js" as="script">
-  <link rel="prefetch" href="../assets//P1163.html-BnCHfdaI.js" as="script">
-  <link rel="prefetch" href="../assets//P1179.html-BACNukuW.js" as="script">
-  <link rel="prefetch" href="../assets//P1308.html-DWJds76p.js" as="script">
-  <link rel="prefetch" href="../assets//P1781.html-CgT4tgZx.js" as="script">
-  <link rel="prefetch" href="../assets//P1789.html-Do9mzX-P.js" as="script">
-  <link rel="prefetch" href="../assets//P1881.html-BvwcpWU8.js" as="script">
-  <link rel="prefetch" href="../assets//P2002.html-Cd3A-gxM.js" as="script">
-  <link rel="prefetch" href="../assets//P2241.html-BW4klaZN.js" as="script">
-  <link rel="prefetch" href="../assets//P3392.html-DZW-gkXx.js" as="script">
-  <link rel="prefetch" href="../assets//P7786.html-HFSM2DPn.js" as="script">
-  <link rel="prefetch" href="../assets//index.html-CFZx8NW4.js" as="script">
-  <link rel="prefetch" href="../assets//404.html-B4qi_wvC.js" as="script">
-  <link rel="prefetch" href="../assets//setupDevtools-7MC2TMWH-B5FJjTah.js" as="script">
-</head>
-
-<body>
-  <div id="app"><!--[-->
-    <div class="vp-theme-container external-link-icon" vp-container><!--[-->
-      <header class="vp-navbar" vp-navbar>
-        <div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0">
-          <div class="icon" aria-hidden="true"><span></span><span></span><span></span></div>
-        </div><span><a class="route-link" href="/"><!----><span class="vp-site-name"
-              aria-hidden="true">FoxPrime</span></a></span>
-        <div class="vp-navbar-items-wrapper" style=""><!--[--><!--]-->
-          <nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[-->
-            <div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="首页"><!---->首页<!----></a>
-            </div>
-            <div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="../suanfa/"
-                aria-label="算法练习题"><!---->算法练习题<!----></a></div><!--]-->
-          </nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg
-              class="light-icon" viewbox="0 0 32 32" style="">
-              <path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z"
-                fill="currentColor"></path>
-              <path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path>
-              <path d="M2 15.005h5v2H2z" fill="currentColor"></path>
-              <path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path>
-              <path d="M15 25.005h2v5h-2z" fill="currentColor"></path>
-              <path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path>
-              <path d="M25 15.005h5v2h-5z" fill="currentColor"></path>
-              <path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path>
-              <path d="M15 2.005h2v5h-2z" fill="currentColor"></path>
-            </svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;">
-              <path
-                d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z"
-                fill="currentColor"></path>
-            </svg></button><!---->
-        </div>
-      </header><!--]-->
-      <div class="vp-sidebar-mask"></div><!--[-->
-      <aside class="vp-sidebar" vp-sidebar>
-        <nav class="vp-navbar-items" aria-label="site navigation"><!--[-->
-          <div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="首页"><!---->首页<!----></a>
-          </div>
-          <div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="../suanfa/"
-              aria-label="算法练习题"><!---->算法练习题<!----></a></div><!--]-->
-        </nav><!--[--><!--]-->
-        <ul class="vp-sidebar-items"><!--[-->
-          <li><a class="route-link route-link-active auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/"
-              aria-label="洛谷习题"><!---->洛谷习题<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/B2008.html"
-              aria-label="B2008"><!---->B2008<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/B2016.html"
-              aria-label="B2016"><!---->B2016<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode02.05.html"
-              aria-label="LeetCode02.05"><!---->LeetCode02.05<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode128.html"
-              aria-label="LeetCode128"><!---->LeetCode128<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode144.html"
-              aria-label="LeetCode144"><!---->LeetCode144<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode148.html"
-              aria-label="LeetCode148"><!---->LeetCode148<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode1855.html"
-              aria-label="LeetCode1855"><!---->LeetCode1855<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode1980.html"
-              aria-label="LeetCode1980"><!---->LeetCode1980<!----></a><!----></li>
-          <li><a class="route-link route-link-active auto-link vp-sidebar-item vp-sidebar-heading active"
-              href="../suanfa/LeetCode1981.html" aria-label="LeetCode1981"><!---->LeetCode1981<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode2007.html"
-              aria-label="LeetCode2007"><!---->LeetCode2007<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode2023.html"
-              aria-label="LeetCode2023"><!---->LeetCode2023<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode2749.html"
-              aria-label="LeetCode2749"><!---->LeetCode2749<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1010.html"
-              aria-label="P1010"><!---->P1010<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1026.html"
-              aria-label="P1206"><!---->P1206<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1036.html"
-              aria-label="P1036"><!---->P1036<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1125.html"
-              aria-label="P1025"><!---->P1025<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1138.html"
-              aria-label="P1138"><!---->P1138<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1163.html"
-              aria-label="P1163"><!---->P1163<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1179.html"
-              aria-label="P1179"><!---->P1179<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1781.html"
-              aria-label="P1781"><!---->P1781<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1308.html"
-              aria-label="P1308"><!---->P1308<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1781.html"
-              aria-label="P1781"><!---->P1781<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1789.html"
-              aria-label="P1789"><!---->P1789<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1881.html"
-              aria-label="P1881"><!---->P1881<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P2002.html"
-              aria-label="P2002"><!---->P2002<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P2241.html"
-              aria-label="P2241"><!---->P2241<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P3392.html"
-              aria-label="P3392"><!---->P3392<!----></a><!----></li>
-          <li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P7786.html"
-              aria-label="P7786"><!---->P7786<!----></a><!----></li><!--]-->
-        </ul><!--[--><!--]-->
-      </aside><!--]--><!--[-->
-      <main class="vp-page"><!--[--><!--]-->
-        <div class="theme-default-content" vp-content><!--[--><!--]-->
-          <div>
-            <h1 id="leetcode1981" tabindex="-1"><a class="header-anchor"
-                href="#leetcode1981"><span>LeetCode1981</span></a></h1>
-            <div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text">
-              <pre><code><span class="line">给你一个大小为 m x n 的整数矩阵 mat 和一个整数 target ,从矩阵的 每一行 中选择一个整数，你的目标是 最小化 所有选中元素之 和 与目标值 target 的 绝对差 ,返回 最小的绝对差 ,a 和 b 两数字的 绝对差 是 a - b 的绝对值。</span>
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>LeetCode1981 | FoxPrime</title><meta name="description" content="">
+    <link rel="preload" href="../assets/style-DY60Z7J7.css" as="style"><link rel="stylesheet" href="../assets/style-DY60Z7J7.css">
+    <link rel="modulepreload" href="../assets/app-BFrzfmyX.js"><link rel="modulepreload" href="../assets/LeetCode1981.html-l-vaXjpj.js">
+    <link rel="prefetch" href="../assets/index.html-CT6UzRdA.js" as="script"><link rel="prefetch" href="../assets/B2008.html-BdYecgj2.js" as="script"><link rel="prefetch" href="../assets/B2016.html-CykR67Ki.js" as="script"><link rel="prefetch" href="../assets/LeetCode02.05.html-BD4rPVIs.js" as="script"><link rel="prefetch" href="../assets/LeetCode128.html-iph1TAd2.js" as="script"><link rel="prefetch" href="../assets/LeetCode144.html-DNUZR5NV.js" as="script"><link rel="prefetch" href="../assets/LeetCode148.html-g3x8wmbJ.js" as="script"><link rel="prefetch" href="../assets/LeetCode1855.html-BD7aoaYS.js" as="script"><link rel="prefetch" href="../assets/LeetCode1980.html-Czddew6c.js" as="script"><link rel="prefetch" href="../assets/LeetCode2007.html-CsFncFBT.js" as="script"><link rel="prefetch" href="../assets/LeetCode2023.html-BwP1TYY6.js" as="script"><link rel="prefetch" href="../assets/LeetCode2749.html-BcBTGpYy.js" as="script"><link rel="prefetch" href="../assets/P1010.html-Cshg8qyH.js" as="script"><link rel="prefetch" href="../assets/P1026.html-bwhTwXx8.js" as="script"><link rel="prefetch" href="../assets/P1036.html-DdvJDxZE.js" as="script"><link rel="prefetch" href="../assets/P1125.html-CJqsTI9z.js" as="script"><link rel="prefetch" href="../assets/P1138.html-O8f6j9d9.js" as="script"><link rel="prefetch" href="../assets/P1163.html-B-ffLVRb.js" as="script"><link rel="prefetch" href="../assets/P1179.html-BAkr75ZC.js" as="script"><link rel="prefetch" href="../assets/P1308.html-DhpHOUaF.js" as="script"><link rel="prefetch" href="../assets/P1781.html-CS0FPOiI.js" as="script"><link rel="prefetch" href="../assets/P1789.html-FeS0OGwX.js" as="script"><link rel="prefetch" href="../assets/P1881.html-Eat7WEfA.js" as="script"><link rel="prefetch" href="../assets/P2002.html-DmOziye0.js" as="script"><link rel="prefetch" href="../assets/P2241.html-Bq0Tx28y.js" as="script"><link rel="prefetch" href="../assets/P3392.html-DzaG6MCv.js" as="script"><link rel="prefetch" href="../assets/P7786.html-DcU93utZ.js" as="script"><link rel="prefetch" href="../assets/Q1.html-wF54URCI.js" as="script"><link rel="prefetch" href="../assets/Q2.html-CSAtJG8M.js" as="script"><link rel="prefetch" href="../assets/Q3.html-m21hveGN.js" as="script"><link rel="prefetch" href="../assets/index.html-B7EbLow4.js" as="script"><link rel="prefetch" href="../assets/ShiftA.html-Csi1-49G.js" as="script"><link rel="prefetch" href="../assets/404.html-DaFHUO8T.js" as="script"><link rel="prefetch" href="../assets/setupDevtools-7MC2TMWH-7wd10huT.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/"><!----><span class="vp-site-name" aria-hidden="true">FoxPrime</span></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="首页"><!---->首页<!----></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="../suanfa/" aria-label="算法练习题"><!---->算法练习题<!----></a></div><!--]--></nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="首页"><!---->首页<!----></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="../suanfa/" aria-label="算法练习题"><!---->算法练习题<!----></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><a class="route-link route-link-active auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/" aria-label="洛谷习题"><!---->洛谷习题<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/B2008.html" aria-label="B2008"><!---->B2008<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/B2016.html" aria-label="B2016"><!---->B2016<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode02.05.html" aria-label="LeetCode02.05"><!---->LeetCode02.05<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode128.html" aria-label="LeetCode128"><!---->LeetCode128<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode144.html" aria-label="LeetCode144"><!---->LeetCode144<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode148.html" aria-label="LeetCode148"><!---->LeetCode148<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode1855.html" aria-label="LeetCode1855"><!---->LeetCode1855<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode1980.html" aria-label="LeetCode1980"><!---->LeetCode1980<!----></a><!----></li><li><a class="route-link route-link-active auto-link vp-sidebar-item vp-sidebar-heading active" href="../suanfa/LeetCode1981.html" aria-label="LeetCode1981"><!---->LeetCode1981<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode2007.html" aria-label="LeetCode2007"><!---->LeetCode2007<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode2023.html" aria-label="LeetCode2023"><!---->LeetCode2023<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/LeetCode2749.html" aria-label="LeetCode2749"><!---->LeetCode2749<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1010.html" aria-label="P1010"><!---->P1010<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1026.html" aria-label="P1206"><!---->P1206<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1036.html" aria-label="P1036"><!---->P1036<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1125.html" aria-label="P1025"><!---->P1025<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1138.html" aria-label="P1138"><!---->P1138<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1163.html" aria-label="P1163"><!---->P1163<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1179.html" aria-label="P1179"><!---->P1179<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1781.html" aria-label="P1781"><!---->P1781<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1308.html" aria-label="P1308"><!---->P1308<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1781.html" aria-label="P1781"><!---->P1781<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1789.html" aria-label="P1789"><!---->P1789<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P1881.html" aria-label="P1881"><!---->P1881<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P2002.html" aria-label="P2002"><!---->P2002<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P2241.html" aria-label="P2241"><!---->P2241<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P3392.html" aria-label="P3392"><!---->P3392<!----></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="../suanfa/P7786.html" aria-label="P7786"><!---->P7786<!----></a><!----></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div class="theme-default-content" vp-content><!--[--><!--]--><div><h1 id="leetcode1981" tabindex="-1"><a class="header-anchor" href="#leetcode1981"><span>LeetCode1981</span></a></h1><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">给你一个大小为 m x n 的整数矩阵 mat 和一个整数 target ,从矩阵的 每一行 中选择一个整数，你的目标是 最小化 所有选中元素之 和 与目标值 target 的 绝对差 ,返回 最小的绝对差 ,a 和 b 两数字的 绝对差 是 a - b 的绝对值。</span>
 <span class="line">思路:</span>
 <span class="line">初始化一个集合 SetSum，用于存储当前可以选择的和的集合。一开始，这个集合里只有一个元素，即 0。</span>
 <span class="line">遍历矩阵的每一行。对于每一行，创建一个新的集合 temp，用于存储这一行选择后可以达到的新和的集合。</span>
@@ -187,21 +46,7 @@
 <span class="line">遍历完所有行后，SetSum 中包含了从矩阵每一行选择一个数字所能达到的所有可能的和。</span>
 <span class="line">接下来，遍历 SetSum 中的所有可能和，计算每个和与 target 的绝对差，并找到其中最小的那个绝对差。</span>
 <span class="line">返回这个最小的绝对差作为结果</span>
-<span class="line"></span></code></pre>
-              <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;">
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-              </div>
-            </div>
-            <div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text">
-              <pre><code><span class="line">public int minimizeTheDifference(int[][] mat, int target) {</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">public int minimizeTheDifference(int[][] mat, int target) {</span>
 <span class="line">        Set&lt;Integer&gt; SetSum = new HashSet&lt;&gt;();</span>
 <span class="line">        SetSum.add(0);//初始值为0</span>
 <span class="line">        for (int[] row : mat) {</span>
@@ -219,45 +64,7 @@
 <span class="line">        }</span>
 <span class="line">        return min;</span>
 <span class="line">    }</span>
-<span class="line"></span></code></pre>
-              <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;">
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-                <div class="line-number"></div>
-              </div>
-            </div>
-          </div><!--[--><!--]-->
-        </div>
-        <footer class="vp-page-meta"><!---->
-          <div class="vp-meta-item git-info"><!----><!----></div>
-        </footer>
-        <nav class="vp-page-nav" aria-label="page navigation"><a class="route-link auto-link prev"
-            href="../suanfa/LeetCode1980.html" aria-label="LeetCode1980">
-            <div class="hint"><span class="arrow left"></span> Prev</div>
-            <div class="link"><span>LeetCode1980</span></div>
-          </a><a class="route-link auto-link next" href="../suanfa/LeetCode2007.html" aria-label="LeetCode2007">
-            <div class="hint">Next <span class="arrow right"></span></div>
-            <div class="link"><span>LeetCode2007</span></div>
-          </a></nav><!--[--><!--]-->
-      </main><!--]-->
-    </div><!--[--><!----><!--]--><!--]-->
-  </div>
-  <script type="module" src="../assets//app-FYnelbtM.js" defer></script>
-</body>
-
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!--[--><!--]--></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="vp-meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: yf17537413229@163.com">FoxPrime-y</span><!----><!--]--><!--]--></span></div></div></footer><nav class="vp-page-nav" aria-label="page navigation"><a class="route-link auto-link prev" href="../suanfa/LeetCode1980.html" aria-label="LeetCode1980"><div class="hint"><span class="arrow left"></span> Prev</div><div class="link"><span>LeetCode1980</span></div></a><a class="route-link auto-link next" href="../suanfa/LeetCode2007.html" aria-label="LeetCode2007"><div class="hint">Next <span class="arrow right"></span></div><div class="link"><span>LeetCode2007</span></div></a></nav><!--[--><!--]--></main><!--]--></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="../assets/app-BFrzfmyX.js" defer></script>
+  </body>
 </html>
