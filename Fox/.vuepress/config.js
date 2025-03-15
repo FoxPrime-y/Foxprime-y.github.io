@@ -41,7 +41,11 @@ export default defineUserConfig({
                   'P2002.md',
                   'P2241.md',
                   'P3392.md',
-                  'P7786.md'
+                  'P7786.md',
+                  'Q1.md',
+                  'Q2.md',
+                  'Q3.md',
+                  'ShiftA.md'
              ]
            }
   }),
